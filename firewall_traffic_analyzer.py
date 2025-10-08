@@ -1,7 +1,7 @@
 # FILE NAME - firewall_traffic_analyzer.py
 
-# NAME: 
-# DATE: 
+# NAME: Nick Allington  
+# DATE: 10.8.25
 # BRIEF DESCRIPTION:  
 
 
@@ -15,7 +15,19 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+port1 = int(input("Enter the port number"))
+traffic1 = int(input("Enter the data transfer size in megabytes (MB):"))
 
+if port1 == 3889 and traffic1 >= 100:
+    print("HIGH RISK: Potential unauthorized remote access detected!")
+elif port1 == 22 and traffic1 >= 100:
+    print("HIGH RISK: Potential unauthorized remote access detected!")
+elif port1 == 80 and traffic1 >= 100:
+    print("MEDIUM RISK: Large unencrypted data transfer detected.")
+elif port1 == 443: 
+    print("LOW RISK: Secure encrypted transfer detected.")
+else:
+    print("UNKNOWN: Unrecognized traffic pattern.")
 
 
 
