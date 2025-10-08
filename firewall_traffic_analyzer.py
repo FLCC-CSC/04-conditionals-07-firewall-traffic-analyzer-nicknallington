@@ -15,19 +15,35 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-port1 = int(input("Enter the port number"))
-traffic1 = int(input("Enter the data transfer size in megabytes (MB):"))
+print("=== Network Traffic Security Analyzer ===")
+port1 = int(input("Enter the port number: "))
+traffic1 = int(input("Enter the data transfer size in megabytes (MB): "))
 
 if port1 == 3889 and traffic1 >= 100:
-    print("HIGH RISK: Potential unauthorized remote access detected!")
+    print("FIREWALL LOG:")
+    print(f'Port: {port1}, Transfer Size: {traffic1} MB')
+    print("Risk Assessment: HIGH RISK: Potential unauthorized remote access detected!")
+    print("------------------------")
 elif port1 == 22 and traffic1 >= 100:
-    print("HIGH RISK: Potential unauthorized remote access detected!")
+    print("FIREWALL LOG:")
+    print(f'Port: {port1}, Transfer Size: {traffic1} MB')
+    print("Risk Assessment: HIGH RISK: Potential unauthorized remote access detected!")
+    print("------------------------")
 elif port1 == 80 and traffic1 >= 100:
-    print("MEDIUM RISK: Large unencrypted data transfer detected.")
+    print("FIREWALL LOG:")
+    print(f'Port: {port1}, Transfer Size: {traffic1} MB')
+    print("Risk Assessment: MEDIUM RISK: Large unencrypted data transfer detected.")
+    print("------------------------")
 elif port1 == 443: 
-    print("LOW RISK: Secure encrypted transfer detected.")
+    print("FIREWALL LOG:")
+    print(f'Port: {port1}, Transfer Size: {traffic1} MB')
+    print("Risk Assessment: LOW RISK: Secure encrypted transfer detected.")
+    print("------------------------")
 else:
-    print("UNKNOWN: Unrecognized traffic pattern.")
+    print("FIREWALL LOG:")
+    print(f'Port: {port1}, Transfer Size: {traffic1} MB')
+    print("Risk Assessment: UNKNOWN: Unrecognized traffic pattern.")
+    print("------------------------")
 
 
 
